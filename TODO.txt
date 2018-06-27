@@ -1,0 +1,7 @@
+2017-01-07
+
+- Deal with gRPC exception.
+For example: trying to insert an existing matching (trying to replay).
+
+- Add automatic update for DistanceTree (BKTree) when Creatives collections are updated (new insert, remove, etc ...).
+
