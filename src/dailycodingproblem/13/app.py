@@ -7,7 +7,7 @@ def find_longest_substring(s: str, k: int) -> str:
     """
     Speed: ~O(N)
     Memory: ~O(1)
-    
+
     :param s:
     :param k:
     :return:
@@ -44,6 +44,14 @@ def main():
     s = "abcbabaab"
     k = 2
     assert find_longest_substring(s, k) == "babaab"
+
+    s = "abcbabaab"
+    k = 3
+    assert find_longest_substring(s, k) == s
+
+    s = "abcbadbaab"
+    k = 3
+    assert find_longest_substring(s, k) == "adbaab"
 
 
 if __name__ == '__main__':
