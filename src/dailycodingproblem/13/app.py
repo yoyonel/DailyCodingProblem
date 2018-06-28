@@ -16,8 +16,9 @@ def find_longest_substring(s: str, k: int) -> str:
     c_lss = ""
     c_c = []
     c_nb_c = 0
-    # TODO: add early exit with while loop (and "good" condition ;-))
-    for c in s:
+
+    i = 0
+    for i, c in enumerate(s):
         if c in c_c:
             c_lss += c
         else:
@@ -31,8 +32,13 @@ def find_longest_substring(s: str, k: int) -> str:
                 c_lss = c_lss[-1] + c
                 c_c = [c_lss[-2], c_lss[-1]]
                 c_nb_c = 2
+
+                # Early exit
+                if (len(s) - i + len(c_lss)) <= len(lss):
+                    break
     if len(c_lss) > len(lss):
         lss = c_lss
+    print(len(s) - i)
     return lss
 
 
@@ -52,6 +58,10 @@ def main():
     s = "abcbadbaab"
     k = 3
     assert find_longest_substring(s, k) == "adbaab"
+
+    s = "abbbbbbbbbbbbbaaaaacbadbaab"
+    k = 2
+    assert find_longest_substring(s, k) == "abbbbbbbbbbbbbaaaaa"
 
 
 if __name__ == '__main__':
