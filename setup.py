@@ -31,6 +31,7 @@ setup(
     ],
     install_requires=[
         "attrs==17.4.0",
+        "matplotlib",
     ],
     extras_require={},
     entry_points={
