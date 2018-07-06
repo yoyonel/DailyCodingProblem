@@ -32,7 +32,7 @@ def find_intersections_arrays(arrs: List[List[int]]) -> List[int]:
         return all([i_arr < l_arr for i_arr, l_arr in zip(i_arrs, l_arrs)])
 
     while OOB():
-        # all elements in arrays are equals
+        # all elements in arrays (at indidces) are equals
         if len(set([arr[i_arr] for arr, i_arr in zip(arrs, i_arrs)])) == 1:
             # add element to results
             result.append(arrs[0][i_arrs[0]])
