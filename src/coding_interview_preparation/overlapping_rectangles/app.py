@@ -44,8 +44,8 @@ class Interval:
         >>> Interval(3, 4).compute_overlapping_area(Interval(0, 2))
         0
         """
-        intersected_segment = min(self.max, other.max) - max(self.min, other.min)
-        return intersected_segment * (intersected_segment > 0)
+        length_intersected_segment = min(self.max, other.max) - max(self.min, other.min)
+        return length_intersected_segment * (length_intersected_segment > 0)
 
 
 @attr.s
