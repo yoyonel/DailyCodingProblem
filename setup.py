@@ -32,6 +32,7 @@ setup(
     install_requires=[
         "attrs==17.4.0",
         "matplotlib",
+        "scipy",
     ],
     extras_require={},
     entry_points={
