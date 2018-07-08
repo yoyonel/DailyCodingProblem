@@ -98,6 +98,9 @@ def main():
     hist = [2, 3, 1, 4, 5, 4, 2]
     print(f"For hist={hist} -> Maximum area is {getMaxAreaFromHisto(hist)}")
 
+    hist = [2, 2, 1, 2, 2]
+    print(f"For hist={hist} -> Maximum area is {getMaxAreaFromHisto(hist)}")
+
     A = [
         [0, 1, 1, 0],
         [1, 1, 1, 1],
